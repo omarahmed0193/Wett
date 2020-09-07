@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Wett</string>
+    <string name="unit_button_text">C\u00B0/ F\u00B0</string>
 </resources>

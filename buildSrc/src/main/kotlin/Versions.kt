@@ -28,7 +28,7 @@ object Versions {
 
     const val com_android_tools_build_gradle: String = "4.0.1"
 
-    const val androidx_test_ext_junit: String = "1.1.1"
+    const val androidx_test_ext_junit: String = "1.1.2"
 
     const val junit_junit: String = "4.13"
 
@@ -40,15 +40,17 @@ object Versions {
 
     const val logging_interceptor: String = "4.8.1"
 
-    const val constraintlayout: String = "2.0.0-rc1"
+    const val constraintlayout: String = "2.0.1"
 
     const val work_runtime_ktx: String = "2.4.0"
 
-    const val espresso_core: String = "3.2.0"
+    const val security_crypto: String = "1.0.0-rc03"
+
+    const val espresso_core: String = "3.3.0"
 
     const val iconics_views: String = "5.0.3"
 
-    const val moshi_kotlin: String = "1.9.3"
+    const val moshi_kotlin: String = "1.10.0"
 
     const val lint_gradle: String = "27.0.1"
 
@@ -58,18 +60,18 @@ object Versions {
 
     const val core_ktx: String = "1.3.1"
 
-    const val material: String = "1.2.0"
+    const val material: String = "1.2.1"
 
     const val aapt2: String = "4.0.1-6197926"
 
-    const val coil: String = "0.11.0"
+    const val coil: String = "0.12.0"
 
     /**
      * Current version: "6.1.1"
      * See issue 19: How to update Gradle itself?
      * https://github.com/jmfayard/buildSrcVersions/issues/19
      */
-    const val gradleLatestVersion: String = "6.6"
+    const val gradleLatestVersion: String = "6.6.1"
 }
 
 /**

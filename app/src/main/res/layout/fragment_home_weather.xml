@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -24,12 +24,52 @@
             android:gravity="center"
             android:orientation="horizontal">
 
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="@{_ -> viewModel.onChangeUnitClick()}"
+                android:textColor="@android:color/darker_gray"
+                app:unitButton="@{viewModel.isUnitMetric}" />
+
         </LinearLayout>
 
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="16dp" />
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:temp="@{viewModel.selectedHour.temp}"
+            app:unit="@{viewModel.isUnitMetric}" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+
+        <SeekBar
+            android:id="@+id/seekBar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="@{viewModel.hourlyWeather.size()-1}"
+            android:onProgressChanged="@{(seekbar, progress, fromUser)-> viewModel.onSeekbarIndexChange(progress)}"
+            android:progress="0" />
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
 
         <Space
             android:layout_width="match_parent"

@@ -6,11 +6,10 @@ import com.afterapps.wett.data.remote.OpenWeatherMapApi
 import com.afterapps.wett.model.network.asDatabaseCurrentWeather
 import com.afterapps.wett.model.network.asDatabaseDailyForecast
 import com.afterapps.wett.model.network.asDatabaseHourlyForecast
-import com.afterapps.wett.util.getEndOfDayTimestamp
-import com.afterapps.wett.util.getEndOfWeekTimestamp
-import com.afterapps.wett.util.getStartOfDayTimestamp
+import com.afterapps.wett.util.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import java.util.*
 
 class WeatherRepository(
     private val weatherDatabase: WeatherDatabase,
@@ -22,8 +21,8 @@ class WeatherRepository(
 
     val hourlyWeather
         get() = weatherDatabase.weatherDao.getTodayHourlyForecast(
-            getStartOfDayTimestamp(),
-            getEndOfDayTimestamp()
+            getCurrentHourTimestamp(),
+            getTheNextTwentyFourHoursTimestamp()
         )
 
     val dailyWeather

@@ -169,6 +169,9 @@ object Libs {
     const val work_runtime_ktx: String = "androidx.work:work-runtime-ktx:" +
             Versions.work_runtime_ktx
 
+    const val security_crypto: String = "androidx.security:security-crypto:" +
+            Versions.security_crypto
+
     /**
      * https://developer.android.com/testing
      */

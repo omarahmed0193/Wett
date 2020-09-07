@@ -20,7 +20,7 @@ data class CurrentWeatherResponse(
 }
 
 fun CurrentWeatherResponse.asDatabaseCurrentWeather() = DatabaseCurrentWeather(
-    timestamp = current.dt.toLong(),
+    timestamp = current.dt.toLong() * 1000,
     temp = current.temp,
     icon = current.weather.firstOrNull()?.icon ?: "",
     description = current.weather.firstOrNull()?.description ?: ""

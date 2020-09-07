@@ -26,7 +26,7 @@ data class HourlyForecastResponse(
 
 fun List<HourlyForecastResponse.Hourly>.asDatabaseHourlyForecast() = map {
     DatabaseHourlyForecast(
-        timestamp = it.dt.toLong(),
+        timestamp = it.dt.toLong()* 1000,
         temp = it.temp,
         windSpeed = it.wind_speed,
         dewPoint = it.dew_point,
